@@ -4,7 +4,6 @@ region  = "asia-southeast1"
 
 # compute detail
 count_compute  = 3
-count_start    = 1
 compute_name   = "webserver-nginx"
 compute_type   = "f1-micro"
 compute_zones  = ["asia-southeast1-a", "asia-southeast1-b", "asia-southeast1-c"]

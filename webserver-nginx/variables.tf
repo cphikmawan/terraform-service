@@ -1,7 +1,6 @@
 variable "project" {}
 variable "region" {}
 variable "count_compute" {}
-variable "count_start" {}
 variable "compute_name" {}
 variable "compute_type" {}
 variable "compute_zones" {

@@ -1,5 +1,5 @@
 module "gcp_compute" {
-  source = "../../modules/gce-skylake-multi-server-with-1-disk"
+  source = ""
 
   # gcp credentials
   project              = var.project

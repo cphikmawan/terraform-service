@@ -4,7 +4,6 @@ region  = "asia-southeast1"
 
 # compute detail
 count_compute        = 3
-count_start          = 1
 compute_name         = "mysql-server"
 compute_type         = "custom-2-4096"
 compute_zones        = ["asia-southeast1-a", "asia-southeast1-b", "asia-southeast1-c"]

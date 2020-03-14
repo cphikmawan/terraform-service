@@ -1,5 +1,5 @@
 module "gcp_compute" {
-  source = "../../modules/gce-skylake-multi-server"
+  source = "git@github.com:cphikmawan/gcp-multi-server.git"
 
   # gcp credentials
   project = var.project
@@ -7,7 +7,6 @@ module "gcp_compute" {
 
   #compute detail
   count_compute  = var.count_compute
-  count_start    = var.count_start
   compute_name   = var.compute_name
   compute_type   = var.compute_type
   compute_zones  = var.compute_zones
