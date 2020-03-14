@@ -1,13 +1,9 @@
 module "gcp_compute" {
-  source = ""
+  source = "git@github.com:cphikmawan/gcp-multi-server.git?ref=v1.1.0"
 
   # gcp credentials
-  project              = var.project
-  compute_disk_project = var.project
-
-  # add disk
-  additional_disk_size = var.additional_disk_size
-  additional_disk_type = var.additional_disk_type
+  project = var.project
+  region  = var.region
 
   #compute detail
   count_compute  = var.count_compute

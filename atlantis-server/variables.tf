@@ -13,5 +13,3 @@ variable "type_root_disk" {}
 variable "service_group" {}
 variable "service_type" {}
 variable "environment" {}
-variable "additional_disk_size" {}
-variable "additional_disk_type" {}
