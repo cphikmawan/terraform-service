@@ -3,7 +3,7 @@ project = "secret-activity"
 region  = "asia-southeast1"
 
 # compute detail
-count_compute  = 2
+count_compute  = 3
 compute_name   = "webserver-nginx"
 compute_type   = "f1-micro"
 compute_zones  = ["asia-southeast1-a", "asia-southeast1-b", "asia-southeast1-c"]

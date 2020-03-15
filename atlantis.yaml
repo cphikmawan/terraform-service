@@ -1,0 +1,56 @@
+---
+  version: 3
+  projects:
+
+  ##################################### START DEVELOPMENT #####################################
+
+  ## START
+    - name: dev-atlantis-server
+      dir: atlantis-server
+      terraform_version: v0.12.23
+      workflow: development
+      autoplan:
+        when_modified: ["*.tf","development.*"]
+        enabled: true
+  ## END
+
+  ## START
+    - name: dev-webserver-nginx
+      dir: webserver-nginx
+      terraform_version: v0.12.23
+      workflow: development
+      autoplan:
+        when_modified: ["*.tf","development.*"]
+        enabled: true
+  ## END
+
+  ##################################### END DEVELOPMENT ###################################
+
+  ## WORKFLOW
+  workflows:
+    development:
+      plan:
+        steps:
+          - run: rm -rf .terraform
+          - init:
+              extra_args: [-backend-config=development.backend.tfvars]
+          - plan:
+              extra_args: [-var-file=development.tfvars]
+      apply:
+        steps:
+          - apply:
+              extra_args: ["-lock=false"]
+
+    staging:
+      plan:
+        steps:
+          - run: rm -rf .terraform
+          - init:
+              extra_args: [-backend-config=staging.backend.tfvars]
+          - plan:
+              extra_args: [-var-file=staging.tfvars]
+      apply:
+        steps:
+          - apply:
+              extra_args: ["-lock=false"]
+  ## END WORKFLOW
