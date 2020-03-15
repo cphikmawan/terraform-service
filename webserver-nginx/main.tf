@@ -1,5 +1,5 @@
 module "gcp_compute" {
-  source = "git@github.com:cphikmawan/gcp-multi-server.git"
+  source = "git@github.com:cphikmawan/gcp-multi-server.git?ref=v1.1.0"
 
   # gcp credentials
   project = var.project
