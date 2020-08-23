@@ -11,6 +11,7 @@ module "gcp_compute" {
   compute_type   = var.compute_type
   compute_zones  = var.compute_zones
   ip_forward     = var.ip_forward
+  ip_forward2    = var.ip_forward2
   images_name    = var.images_name
   size_root_disk = var.size_root_disk
   type_root_disk = var.type_root_disk

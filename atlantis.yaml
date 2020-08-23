@@ -24,6 +24,16 @@
         enabled: true
   ## END
 
+  ## START
+    - name: dev-webserver-nginx
+      dir: webserver-nginx
+      terraform_version: v0.12.23
+      workflow: development
+      autoplan:
+        when_modified: ["*.tf","development.*"]
+        enabled: true
+## END
+
   ##################################### END DEVELOPMENT ###################################
 
   ## WORKFLOW
